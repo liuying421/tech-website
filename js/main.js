@@ -73,23 +73,23 @@ if (contactForm) {
     const company = document.getElementById('f-company').value.trim();
 
     if (!name || !phone || !company) {
-      showToast('璇峰～鍐欏繀濉」', '濮撳悕銆佺數璇濆拰鍏徃涓哄繀濉俊鎭?, '鈿狅笍');
+      showToast('请填写必填项', '姓名、电话和公司为必填信息', '⚠️');
       return;
     }
     if (!/^1[3-9]\d{9}$/.test(phone)) {
-      showToast('鐢佃瘽鏍煎紡閿欒', '璇疯緭鍏ユ纭殑11浣嶆墜鏈哄彿鐮?, '鈿狅笍');
+      showToast('电话格式错误', '请输入正确的11位手机号码', '⚠️');
       return;
     }
 
     const submitBtn = contactForm.querySelector('.submit-btn');
-    submitBtn.textContent = '鎻愪氦涓?..';
+    submitBtn.textContent = '提交中...';
     submitBtn.disabled = true;
 
     setTimeout(() => {
       contactForm.style.display = 'none';
       formSuccess.style.display = 'block';
-      showToast('鎻愪氦鎴愬姛锛?, '鎴戜滑浼氬湪24灏忔椂鍐呬笌鎮ㄨ仈绯?, '鉁?);
-      submitBtn.textContent = '绔嬪嵆鑾峰彇鍏嶈垂鍜ㄨ';
+      showToast('提交成功！', '我们会在24小时内与您联系', '✅');
+      submitBtn.textContent = '立即获取免费咨询';
       submitBtn.disabled = false;
     }, 1200);
   });
@@ -107,7 +107,7 @@ document.querySelectorAll('[data-page="contact"]').forEach(el => {
 });
 
 // ===== Toast =====
-function showToast(title, desc, icon = '鉁?) {
+function showToast(title, desc, icon = '✅') {
   let toast = document.getElementById('globalToast');
   if (!toast) {
     toast = document.createElement('div');
