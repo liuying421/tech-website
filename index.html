@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>绠€閬撲簯 路 闆朵唬鐮佸簲鐢ㄦ惌寤哄钩鍙?/title>
-  <meta name="description" content="绠€閬撲簯鏄竼杞棗涓嬮浂浠ｇ爜杞婚噺绾у簲鐢ㄦ惌寤哄钩鍙帮紝240涓?浼佷笟浣跨敤锛屾彁渚涜〃鍗曘€佹祦绋嬨€佷华琛ㄧ洏銆佹暟鎹伐鍘傜瓑鍔熻兘锛?鍒嗛挓鎼缓涓氬姟绠＄悊绯荤粺銆? />
+  <title>简道云 · 零代码应用搭建平台</title>
+  <meta name="description" content="简道云是帆软旗下零代码轻量级应用搭建平台，240万+企业使用，提供表单、流程、仪表盘、数据工厂等功能，5分钟搭建业务管理系统。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* 绠€閬撲簯鍝佺墝鑹茶鐩?*/
+    /* 简道云品牌色覆盖 */
     :root {
       --primary: #1664FF;
       --primary-dark: #0d4fd4;
       --primary-light: #4285ff;
       --accent: #00CFFF;
     }
-    /* Logo鍖虹壒娈婃牱寮?*/
+    /* Logo区特殊样式 */
     .jdy-logo-wrap { display:flex; align-items:center; gap:8px; }
     .jdy-logo-icon {
       width:32px; height:32px; border-radius:8px;
@@ -24,7 +24,7 @@
       display:flex; align-items:center; justify-content:center;
       font-size:1rem; color:#fff; font-weight:800;
     }
-    /* 浜у搧鍔熻兘 tab */
+    /* 产品功能 tab */
     .func-tabs { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:40px; }
     .func-tab {
       padding:8px 20px; border-radius:20px; font-size:0.88rem; font-weight:600;
@@ -35,7 +35,7 @@
       background:rgba(22,100,255,0.12); border-color:var(--primary-light);
       color:var(--primary-light);
     }
-    /* 瀹㈡埛Logo鏍?*/
+    /* 客户Logo栏 */
     .clients-bar {
       padding:48px 5% 0;
       text-align:center;
@@ -52,7 +52,7 @@
       transition:all .2s;
     }
     .client-logo-item:hover { border-color:rgba(22,100,255,0.3); color:var(--text-main); }
-    /* 鍦烘櫙鍗＄墖 */
+    /* 场景卡片 */
     .scene-grid {
       display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
       gap:20px;
@@ -66,7 +66,7 @@
     .scene-card .s-icon { font-size:1.8rem; margin-bottom:14px; }
     .scene-card h4 { font-size:1rem; font-weight:700; margin-bottom:8px; }
     .scene-card p { font-size:0.87rem; color:var(--text-muted); line-height:1.7; }
-    /* 浠锋牸鍖?*/
+    /* 价格区 */
     .price-grid {
       display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:24px;
@@ -93,7 +93,7 @@
     .price-desc { font-size:0.85rem; color:var(--text-muted); }
     .price-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin:8px 0; flex:1; }
     .price-features li { font-size:0.87rem; color:var(--text-muted); display:flex; align-items:center; gap:8px; }
-    .price-features li::before { content:'鉁?; color:var(--accent); flex-shrink:0; }
+    .price-features li::before { content:'✓'; color:var(--accent); flex-shrink:0; }
   </style>
 </head>
 <body>
@@ -101,24 +101,24 @@
 <!-- ===== Navbar ===== -->
 <nav class="navbar">
   <a class="jdy-logo-wrap" href="#" data-page="home" style="text-decoration:none;">
-    <div class="jdy-logo-icon">绠€</div>
-    <span style="font-size:1.15rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">绠€閬撲簯</span>
+    <div class="jdy-logo-icon">简</div>
+    <span style="font-size:1.15rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">简道云</span>
   </a>
   <div class="nav-links">
-    <a href="#" data-page="home" class="active">棣栭〉</a>
-    <a href="#" data-page="products">浜у搧鍔熻兘</a>
-    <a href="#" data-page="contact">鑱旂郴鎴戜滑</a>
-    <a href="#" data-page="contact" class="nav-cta">鍏嶈垂浣跨敤</a>
+    <a href="#" data-page="home" class="active">首页</a>
+    <a href="#" data-page="products">产品功能</a>
+    <a href="#" data-page="contact">联系我们</a>
+    <a href="#" data-page="contact" class="nav-cta">免费使用</a>
   </div>
   <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu">
-  <a href="#" data-page="home">棣栭〉</a>
-  <a href="#" data-page="products">浜у搧鍔熻兘</a>
-  <a href="#" data-page="contact">鑱旂郴鎴戜滑</a>
-  <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
+  <a href="#" data-page="home">首页</a>
+  <a href="#" data-page="products">产品功能</a>
+  <a href="#" data-page="contact">联系我们</a>
+  <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
 </div>
 
 <!-- ==================== HOME PAGE ==================== -->
@@ -128,35 +128,35 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-badge">
-        <span></span> 杩炵画 4 骞翠腑鍥介浂浠ｇ爜甯傚満鍗犳湁鐜囩涓€
+        <span></span> 连续 4 年中国零代码市场占有率第一
       </div>
       <h1>
-        闆朵唬鐮佹惌寤?br>
-        <span class="gradient-text">浼佷笟绠＄悊绯荤粺</span>
+        零代码搭建<br>
+        <span class="gradient-text">企业管理系统</span>
       </h1>
       <p class="hero-desc">
-        鏃犻渶缂栫▼鍩虹锛屽儚鎼Н鏈ㄤ竴鏍凤紝5 鍒嗛挓鏋勫缓杩涢攢瀛樸€丆RM銆佺敓浜х鐞嗐€佸鎵规祦绋嬬瓑浼佷笟搴旂敤銆傚竼杞棗涓嬶紝240 涓? 浼佷笟鐨勫叡鍚岄€夋嫨銆?
+        无需编程基础，像搭积木一样，5 分钟构建进销存、CRM、生产管理、审批流程等企业应用。帆软旗下，240 万+ 企业的共同选择。
       </p>
       <div class="hero-actions">
-        <a href="#" data-page="contact" class="btn btn-primary">鍏嶈垂娉ㄥ唽浣跨敤</a>
-        <a href="#" data-page="products" class="btn btn-outline">鏌ョ湅浜у搧鍔熻兘</a>
+        <a href="#" data-page="contact" class="btn btn-primary">免费注册使用</a>
+        <a href="#" data-page="products" class="btn btn-outline">查看产品功能</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num">240涓?</span>
-          <span class="stat-label">娉ㄥ唽浼佷笟缁勭粐</span>
+          <span class="stat-num">240万+</span>
+          <span class="stat-label">注册企业组织</span>
         </div>
         <div class="stat">
-          <span class="stat-num">5 鍒嗛挓</span>
-          <span class="stat-label">蹇€熸惌寤哄簲鐢?/span>
+          <span class="stat-num">5 分钟</span>
+          <span class="stat-label">快速搭建应用</span>
         </div>
         <div class="stat">
-          <span class="stat-num">0 琛?/span>
-          <span class="stat-label">浠ｇ爜闇€姹?/span>
+          <span class="stat-num">0 行</span>
+          <span class="stat-label">代码需求</span>
         </div>
         <div class="stat">
-          <span class="stat-num">4 骞?#1</span>
-          <span class="stat-label">甯傚満鍗犳湁鐜?/span>
+          <span class="stat-num">4 年 #1</span>
+          <span class="stat-label">市场占有率</span>
         </div>
       </div>
     </div>
@@ -166,138 +166,138 @@
     </div>
   </section>
 
-  <!-- 瀹㈡埛鍝佺墝 -->
+  <!-- 客户品牌 -->
   <div class="clients-bar">
-    <p>娣卞彈鍚勮涓氬ご閮ㄤ紒涓氫俊浠?/p>
+    <p>深受各行业头部企业信任</p>
     <div class="client-logos">
-      <div class="client-logo-item">涓浗骞冲畨</div>
-      <div class="client-logo-item">鍗庝负鎶€鏈?/div>
-      <div class="client-logo-item">鎷涘晢閾惰</div>
-      <div class="client-logo-item">缇庡洟澶栧崠</div>
-      <div class="client-logo-item">涓浗鐭冲寲</div>
-      <div class="client-logo-item">椤轰赴閫熻繍</div>
-      <div class="client-logo-item">钄氭潵姹借溅</div>
-      <div class="client-logo-item">瀛楄妭璺冲姩</div>
+      <div class="client-logo-item">中国平安</div>
+      <div class="client-logo-item">华为技术</div>
+      <div class="client-logo-item">招商银行</div>
+      <div class="client-logo-item">美团外卖</div>
+      <div class="client-logo-item">中国石化</div>
+      <div class="client-logo-item">顺丰速运</div>
+      <div class="client-logo-item">蔚来汽车</div>
+      <div class="client-logo-item">字节跳动</div>
     </div>
   </div>
 
-  <!-- 鍥涘ぇ鏍稿績鍔熻兘 -->
+  <!-- 四大核心功能 -->
   <section class="features">
     <div class="text-center">
-      <div class="section-tag">鍥涘ぇ鏍稿績妯″潡</div>
-      <h2 class="section-title">涓€涓钩鍙帮紝瑕嗙洊浼佷笟鍏ㄩ儴绠＄悊闇€姹?/h2>
-      <p class="section-sub">琛ㄥ崟鏀堕泦銆佹祦绋嬪鎵广€佹暟鎹垎鏋愩€佺煡璇嗘矇娣€锛屽叏閮ㄥ湪绠€閬撲簯涓€绔欐悶瀹氥€?/p>
+      <div class="section-tag">四大核心模块</div>
+      <h2 class="section-title">一个平台，覆盖企业全部管理需求</h2>
+      <p class="section-sub">表单收集、流程审批、数据分析、知识沉淀，全部在简道云一站搞定。</p>
     </div>
     <div class="features-grid">
       <div class="feature-card fade-in">
-        <div class="feature-icon">馃搵</div>
-        <h3>琛ㄥ崟涓庢暟鎹敹闆?/h3>
-        <p>鎷栨嫿閰嶇疆 30+ 瀛楁绫诲瀷锛屾敮鎸佹潯浠舵樉绀恒€佸叧鑱旀暟鎹€佸叕寮忚绠椼€侾C + 绉诲姩绔悓姝ワ紝闅忔椂闅忓湴褰曞叆鏁版嵁銆?/p>
+        <div class="feature-icon">📋</div>
+        <h3>表单与数据收集</h3>
+        <p>拖拽配置 30+ 字段类型，支持条件显示、关联数据、公式计算。PC + 移动端同步，随时随地录入数据。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">馃攧</div>
-        <h3>娴佺▼寮曟搸涓庡鎵?/h3>
-        <p>鍙鍖栭厤缃鎵硅妭鐐癸紝鏀寔浼氱銆佹垨绛俱€佹潯浠跺垎鏀€佽嚜鍔ㄨЕ鍙戙€傞拤閽?/ 浼佸井 / 寰俊娑堟伅瀹炴椂鎺ㄩ€併€?/p>
+        <div class="feature-icon">🔄</div>
+        <h3>流程引擎与审批</h3>
+        <p>可视化配置审批节点，支持会签、或签、条件分支、自动触发。钉钉 / 企微 / 微信消息实时推送。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">馃搳</div>
-        <h3>浠〃鐩樹笌鏁版嵁鍒嗘瀽</h3>
-        <p>10+ 鍥捐〃绫诲瀷锛屽疄鏃舵洿鏂帮紝鏀寔璺ㄨ〃鑱斿姩鍒嗘瀽銆侼L2SQL 鑷劧璇█鏌ヨ锛屼笟鍔′汉鍛樹篃鑳界湅鎳傛暟鎹€?/p>
+        <div class="feature-icon">📊</div>
+        <h3>仪表盘与数据分析</h3>
+        <p>10+ 图表类型，实时更新，支持跨表联动分析。NL2SQL 自然语言查询，业务人员也能看懂数据。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">馃</div>
-        <h3>鏅鸿兘鍔╂墜 Pro</h3>
-        <p>AI 鑷姩濉啓銆佹櫤鑳芥€荤粨銆佸紓甯搁璀︼紝璁╅噸澶嶅伐浣滀氦缁?AI锛屼汉涓撴敞浜庢洿鏈変环鍊肩殑鍐崇瓥涓庡垱閫犮€?/p>
+        <div class="feature-icon">🤖</div>
+        <h3>智能助手 Pro</h3>
+        <p>AI 自动填写、智能总结、异常预警，让重复工作交给 AI，人专注于更有价值的决策与创造。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">馃彮</div>
-        <h3>鏁版嵁宸ュ巶</h3>
-        <p>澶氳〃鏁版嵁铻嶅悎璁＄畻锛屽鏉備笟鍔￠€昏緫闆朵唬鐮侀厤缃紝鎵撻€氬悇涓氬姟绯荤粺瀛ゅ矝锛屾瀯寤轰紒涓氱骇鏁版嵁涓彴銆?/p>
+        <div class="feature-icon">🏭</div>
+        <h3>数据工厂</h3>
+        <p>多表数据融合计算，复杂业务逻辑零代码配置，打通各业务系统孤岛，构建企业级数据中台。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">馃摎</div>
-        <h3>鐭ヨ瘑搴撲笌鍗忓悓</h3>
-        <p>鍦ㄧ嚎鏂囨。銆乄iki銆侀€氱煡鍏憡锛屽洟闃熺煡璇嗘矇娣€涓庡叡浜紝鏀寔澶氫汉瀹炴椂鍗忎綔缂栬緫锛屾潈闄愮簿缁嗗寲绠℃帶銆?/p>
+        <div class="feature-icon">📚</div>
+        <h3>知识库与协同</h3>
+        <p>在线文档、Wiki、通知公告，团队知识沉淀与共享，支持多人实时协作编辑，权限精细化管控。</p>
       </div>
     </div>
   </section>
 
-  <!-- 搴旂敤鍦烘櫙 -->
+  <!-- 应用场景 -->
   <section style="background:var(--bg-dark);">
     <div class="text-center">
-      <div class="section-tag">搴旂敤鍦烘櫙</div>
-      <h2 class="section-title">瑕嗙洊 20+ 琛屼笟锛?00+ 涓氬姟鍦烘櫙</h2>
-      <p class="section-sub">鏃犺鎮ㄥ湪鍝釜琛屼笟锛岄兘鑳芥壘鍒板紑绠卞嵆鐢ㄧ殑妯℃澘蹇€熷惎鍔ㄣ€?/p>
+      <div class="section-tag">应用场景</div>
+      <h2 class="section-title">覆盖 20+ 行业，500+ 业务场景</h2>
+      <p class="section-sub">无论您在哪个行业，都能找到开箱即用的模板快速启动。</p>
     </div>
     <div class="scene-grid">
       <div class="scene-card fade-in">
-        <div class="s-icon">馃彧</div>
-        <h4>杩涢攢瀛樼鐞?/h4>
-        <p>閲囪喘鍏ュ簱銆侀攢鍞嚭搴撱€佸簱瀛橀璀︺€佷緵搴斿晢绠＄悊锛屽叏娴佺▼绾夸笂鍖栥€?/p>
+        <div class="s-icon">🏪</div>
+        <h4>进销存管理</h4>
+        <p>采购入库、销售出库、库存预警、供应商管理，全流程线上化。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃懃</div>
-        <h4>CRM 瀹㈡埛绠＄悊</h4>
-        <p>瀹㈡埛璺熻繘銆佸晢鏈虹鐞嗐€佸悎鍚屽鎵广€佸洖娆炬彁閱掞紝閿€鍞叏绋嬪彲杩借釜銆?/p>
+        <div class="s-icon">👥</div>
+        <h4>CRM 客户管理</h4>
+        <p>客户跟进、商机管理、合同审批、回款提醒，销售全程可追踪。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃彮</div>
-        <h4>鐢熶骇鍒堕€犵鐞?/h4>
-        <p>宸ュ崟娲惧彂銆佽川妫€璁板綍銆佽澶囩偣妫€銆佷骇鑳界粺璁★紝宸ュ巶鏁板瓧鍖栦竴姝ュ埌浣嶃€?/p>
+        <div class="s-icon">🏭</div>
+        <h4>生产制造管理</h4>
+        <p>工单派发、质检记录、设备点检、产能统计，工厂数字化一步到位。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃鈥嶐煉?/div>
-        <h4>浜轰簨 OA 绠＄悊</h4>
-        <p>璇峰亣瀹℃壒銆佹姤閿€娴佺▼銆佽€冨嫟鎵撳崱銆佺哗鏁堣€冩牳锛孒R 宸ヤ綔鏁堢巼缈诲€嶃€?/p>
+        <div class="s-icon">🧑‍💼</div>
+        <h4>人事 OA 管理</h4>
+        <p>请假审批、报销流程、考勤打卡、绩效考核，HR 工作效率翻倍。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃彈锔?/div>
-        <h4>椤圭洰绠＄悊</h4>
-        <p>浠诲姟鍒嗛厤銆佽繘搴﹁窡韪€佺敇鐗瑰浘銆侀闄╁彴璐︼紝椤圭洰鍏ㄧ敓鍛藉懆鏈熸帉鎺с€?/p>
+        <div class="s-icon">🏗️</div>
+        <h4>项目管理</h4>
+        <p>任务分配、进度跟踪、甘特图、风险台账，项目全生命周期掌控。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃帗</div>
-        <h4>鏁欒偛鍩硅绠＄悊</h4>
-        <p>鎶ュ悕鏀堕泦銆佽绋嬪畨鎺掋€佸鍛樻。妗堛€佽€冭瘯璇勫垎锛屾牎鍔＄鐞嗘洿楂樻晥銆?/p>
+        <div class="s-icon">🎓</div>
+        <h4>教育培训管理</h4>
+        <p>报名收集、课程安排、学员档案、考试评分，校务管理更高效。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃彞</div>
-        <h4>鍖荤枟鍋ュ悍绠＄悊</h4>
-        <p>鎮ｈ€呬俊鎭€佹鏌ヨ褰曘€佽€楁潗绠＄悊銆佹帓鐝畨鎺掞紝鍚堣楂樻晥杩愯浆銆?/p>
+        <div class="s-icon">🏥</div>
+        <h4>医疗健康管理</h4>
+        <p>患者信息、检查记录、耗材管理、排班安排，合规高效运转。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">馃彚</div>
-        <h4>琛屾斂鍚庡嫟绠＄悊</h4>
-        <p>浼氳瀹ら绾︺€佽祫浜ч鐢ㄣ€佽瀹㈢櫥璁般€佸浐瀹氳祫浜х鐞嗭紝涓€琛ㄧ鍏ㄥ眬銆?/p>
+        <div class="s-icon">🏢</div>
+        <h4>行政后勤管理</h4>
+        <p>会议室预约、资产领用、访客登记、固定资产管理，一表管全局。</p>
       </div>
     </div>
   </section>
 
-  <!-- 浜у搧鍏ュ彛 -->
+  <!-- 产品入口 -->
   <section class="products-home">
     <div class="text-center">
-      <div class="section-tag">浜у搧鐭╅樀</div>
-      <h2 class="section-title">浠庤交閲忓埌浼佷笟绾э紝鎸夐渶閫夋嫨</h2>
-      <p class="section-sub">涓汉鍏嶈垂鐗堝埌浼佷笟鏃楄埌鐗堬紝婊¤冻涓嶅悓瑙勬ā鍥㈤槦闇€姹傘€?/p>
+      <div class="section-tag">产品矩阵</div>
+      <h2 class="section-title">从轻量到企业级，按需选择</h2>
+      <p class="section-sub">个人免费版到企业旗舰版，满足不同规模团队需求。</p>
     </div>
     <div class="products-home-grid">
       <div class="product-entry-card fade-in">
-        <div class="pec-icon">馃啌</div>
-        <div class="pec-title">鍏嶈垂鐗?/div>
-        <div class="pec-desc">姘镐箙鍏嶈垂锛? 鍚嶆垚鍛橈紝鍩虹琛ㄥ崟涓庢祦绋嬪姛鑳斤紝閫傚悎涓汉鍜屽皬鍥㈤槦蹇€熶笂鎵嬩綋楠岀畝閬撲簯鏍稿績鑳藉姏銆?/div>
-        <a href="#" data-page="contact" class="btn btn-outline btn-sm">绔嬪嵆鍏嶈垂娉ㄥ唽 鈫?/a>
+        <div class="pec-icon">🆓</div>
+        <div class="pec-title">免费版</div>
+        <div class="pec-desc">永久免费，3 名成员，基础表单与流程功能，适合个人和小团队快速上手体验简道云核心能力。</div>
+        <a href="#" data-page="contact" class="btn btn-outline btn-sm">立即免费注册 →</a>
       </div>
       <div class="product-entry-card fade-in">
-        <div class="pec-icon">馃殌</div>
-        <div class="pec-title">涓撲笟鐗?/ 鏃楄埌鐗?/div>
-        <div class="pec-desc">瑙ｉ攣鍏ㄩ儴鍔熻兘妯″潡锛氭暟鎹伐鍘傘€佹櫤鑳藉姪鎵?Pro銆侀珮绾ф潈闄愩€丄PI 闆嗘垚銆佷笓灞炲鏈嶏紝鏀寔鏇村鎴愬憳鍜屾暟鎹噺銆?/div>
-        <a href="#" data-page="products" class="btn btn-outline btn-sm">鏌ョ湅鐗堟湰瀵规瘮 鈫?/a>
+        <div class="pec-icon">🚀</div>
+        <div class="pec-title">专业版 / 旗舰版</div>
+        <div class="pec-desc">解锁全部功能模块：数据工厂、智能助手 Pro、高级权限、API 集成、专属客服，支持更多成员和数据量。</div>
+        <a href="#" data-page="products" class="btn btn-outline btn-sm">查看版本对比 →</a>
       </div>
       <div class="product-entry-card fade-in">
-        <div class="pec-icon">馃彚</div>
-        <div class="pec-title">绉佹湁鍖栭儴缃?/div>
-        <div class="pec-desc">鏀寔浼佷笟鑷缓鏈嶅姟鍣ㄧ嫭绔嬮儴缃诧紝鏁版嵁瀹屽叏鑷富鎺屾帶锛屾弧瓒抽噾铻嶃€佸尰鐤椼€佹斂搴滅瓑楂樺悎瑙勮涓氶渶姹傘€?/div>
-        <a href="#" data-page="contact" class="btn btn-outline btn-sm">鑱旂郴閿€鍞洟闃?鈫?/a>
+        <div class="pec-icon">🏢</div>
+        <div class="pec-title">私有化部署</div>
+        <div class="pec-desc">支持企业自建服务器独立部署，数据完全自主掌控，满足金融、医疗、政府等高合规行业需求。</div>
+        <a href="#" data-page="contact" class="btn btn-outline btn-sm">联系销售团队 →</a>
       </div>
     </div>
   </section>
@@ -305,12 +305,12 @@
   <!-- CTA Banner -->
   <section style="padding: 80px 0;">
     <div class="cta-banner fade-in">
-      <div class="section-tag">绔嬪嵆寮€濮?/div>
-      <h2 class="section-title">5 鍒嗛挓锛屾惌寤烘偍鐨勭涓€涓笟鍔″簲鐢?/h2>
-      <p>娉ㄥ唽鍗抽€?14 澶╀笓涓氱増浣撻獙锛屾棤闇€淇＄敤鍗★紝闅忔椂鍙彇娑堬紝240 涓?浼佷笟鐨勫叡鍚岄€夋嫨銆?/p>
+      <div class="section-tag">立即开始</div>
+      <h2 class="section-title">5 分钟，搭建您的第一个业务应用</h2>
+      <p>注册即送 14 天专业版体验，无需信用卡，随时可取消，240 万+企业的共同选择。</p>
       <div class="cta-actions">
-        <a href="#" data-page="contact" class="btn btn-primary">鍏嶈垂娉ㄥ唽浣撻獙</a>
-        <a href="#" data-page="contact" class="btn btn-outline">棰勭害浜у搧婕旂ず</a>
+        <a href="#" data-page="contact" class="btn btn-primary">免费注册体验</a>
+        <a href="#" data-page="contact" class="btn btn-outline">预约产品演示</a>
       </div>
     </div>
   </section>
@@ -323,179 +323,179 @@
 <div id="page-products" class="page">
 
   <div class="page-banner">
-    <div class="section-tag">浜у搧鍔熻兘</div>
-    <h1 class="section-title">鎵€鏈夊姛鑳斤紝涓€瑙堟棤浣?/h1>
-    <p>浠庨浂浠ｇ爜琛ㄥ崟鍒?AI 鏅鸿兘鍔╂墜锛岀畝閬撲簯鎸佺画杩涘寲锛屾弧瓒充紒涓氬叏鍦烘櫙闇€姹傘€?/p>
+    <div class="section-tag">产品功能</div>
+    <h1 class="section-title">所有功能，一览无余</h1>
+    <p>从零代码表单到 AI 智能助手，简道云持续进化，满足企业全场景需求。</p>
   </div>
 
   <section>
     <div class="products-list">
 
       <div class="product-card fade-in">
-        <div class="pc-badge">鏍稿績鍔熻兘</div>
-        <div class="pc-icon">馃搵</div>
-        <div class="pc-title">琛ㄥ崟璁捐鍣?/div>
+        <div class="pc-badge">核心功能</div>
+        <div class="pc-icon">📋</div>
+        <div class="pc-title">表单设计器</div>
         <div class="pc-desc">
-          鎷栨嫿寮忚〃鍗曟瀯寤猴紝30+ 瀛楁绫诲瀷锛堟枃鏈€佹暟瀛椼€侀檮浠躲€佺鍚嶃€佸畾浣嶇瓑锛夛紝鏀寔鏉′欢鏄剧ず銆佸叧鑱旀煡璇€佸叕寮忚绠楋紝婊¤冻鍚勭被鏁版嵁鏀堕泦闇€姹傘€?
+          拖拽式表单构建，30+ 字段类型（文本、数字、附件、签名、定位等），支持条件显示、关联查询、公式计算，满足各类数据收集需求。
         </div>
         <ul class="pc-features">
-          <li>30+ 瀛楁绫诲瀷锛岃鐩栨墍鏈夊綍鍏ュ満鏅?/li>
-          <li>鏉′欢閫昏緫銆佸叧鑱旀暟鎹€佸叕寮忚绠?/li>
-          <li>PC + 鎵嬫満绔嚜閫傚簲锛岄殢鏃跺綍鍏?/li>
-          <li>瀛愯〃鍗曟敮鎸佸姩鎬佽鏁版嵁绠＄悊</li>
+          <li>30+ 字段类型，覆盖所有录入场景</li>
+          <li>条件逻辑、关联数据、公式计算</li>
+          <li>PC + 手机端自适应，随时录入</li>
+          <li>子表单支持动态行数据管理</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">棰勭害婕旂ず</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">娴佺▼瀹℃壒</div>
-        <div class="pc-icon">馃攧</div>
-        <div class="pc-title">娴佺▼寮曟搸</div>
+        <div class="pc-badge">流程审批</div>
+        <div class="pc-icon">🔄</div>
+        <div class="pc-title">流程引擎</div>
         <div class="pc-desc">
-          鍙鍖栨祦绋嬭妭鐐归厤缃紝鏀寔浼氱銆佹垨绛俱€佸鎵樸€佸姞绛撅紝鏉′欢鍒嗘敮鑷姩璺敱锛岄拤閽?浼佸井/閭欢澶氭笭閬撴秷鎭€氱煡锛屽鎵规晥鐜囨彁鍗?60%銆?
+          可视化流程节点配置，支持会签、或签、委托、加签，条件分支自动路由，钉钉/企微/邮件多渠道消息通知，审批效率提升 60%。
         </div>
         <ul class="pc-features">
-          <li>鍙鍖栨祦绋嬪浘锛屾嫋鎷介厤缃妭鐐?/li>
-          <li>浼氱銆佹垨绛俱€佹潯浠跺垎鏀伒娲荤粍鍚?/li>
-          <li>閽夐拤 / 浼佸井 / 寰俊娑堟伅瀹炴椂鎺ㄩ€?/li>
-          <li>瀹℃壒鍘嗗彶鍏ㄧ▼鍙拷婧?/li>
+          <li>可视化流程图，拖拽配置节点</li>
+          <li>会签、或签、条件分支灵活组合</li>
+          <li>钉钉 / 企微 / 微信消息实时推送</li>
+          <li>审批历史全程可追溯</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">棰勭害婕旂ず</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">鏁版嵁鍒嗘瀽</div>
-        <div class="pc-icon">馃搳</div>
-        <div class="pc-title">鍒嗘瀽浠〃鐩?/div>
+        <div class="pc-badge">数据分析</div>
+        <div class="pc-icon">📊</div>
+        <div class="pc-title">分析仪表盘</div>
         <div class="pc-desc">
-          10+ 鍥捐〃绫诲瀷锛堟姌绾裤€佹煴鐘躲€侀ゼ鍥俱€佸湴鍥俱€佹紡鏂楃瓑锛夛紝瀹炴椂鏁版嵁鑱斿姩锛屾敮鎸佸琛ㄨ法婧愬垎鏋愶紝鑷劧璇█ AI 鏌ヨ锛岃姣忎釜浜洪兘鎴愪负鏁版嵁鍒嗘瀽甯堛€?
+          10+ 图表类型（折线、柱状、饼图、地图、漏斗等），实时数据联动，支持多表跨源分析，自然语言 AI 查询，让每个人都成为数据分析师。
         </div>
         <ul class="pc-features">
-          <li>10+ 鍥捐〃绫诲瀷锛屾嫋鎷介厤缃?/li>
-          <li>NL2SQL 鑷劧璇█鏅鸿兘鏌ヨ</li>
-          <li>瀹炴椂鏁版嵁鏇存柊锛岃嚜鍔ㄥ埛鏂?/li>
-          <li>RBAC 鏉冮檺锛屾暟鎹畨鍏ㄩ殧绂?/li>
+          <li>10+ 图表类型，拖拽配置</li>
+          <li>NL2SQL 自然语言智能查询</li>
+          <li>实时数据更新，自动刷新</li>
+          <li>RBAC 权限，数据安全隔离</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">棰勭害婕旂ず</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">AI 鍔熻兘</div>
-        <div class="pc-icon">馃</div>
-        <div class="pc-title">鏅鸿兘鍔╂墜 Pro</div>
+        <div class="pc-badge">AI 功能</div>
+        <div class="pc-icon">🤖</div>
+        <div class="pc-title">智能助手 Pro</div>
         <div class="pc-desc">
-          鍩轰簬浼佷笟涓氬姟鏁版嵁鐨?AI 鍔╂墜锛屾敮鎸佹櫤鑳藉～鍐欍€佸唴瀹规€荤粨銆佸紓甯搁璀︺€佹暟鎹礊瀵熸姤鍛婅嚜鍔ㄧ敓鎴愶紝灏嗛噸澶嶆€у伐浣滄晥鐜囨彁鍗?3 鍊嶃€?
+          基于企业业务数据的 AI 助手，支持智能填写、内容总结、异常预警、数据洞察报告自动生成，将重复性工作效率提升 3 倍。
         </div>
         <ul class="pc-features">
-          <li>AI 鏅鸿兘璇嗗埆骞惰嚜鍔ㄥ～鍐欒〃鍗?/li>
-          <li>鏂囨。鏅鸿兘鎬荤粨涓庢憳瑕佺敓鎴?/li>
-          <li>涓氬姟寮傚父鑷姩璇嗗埆骞堕璀?/li>
-          <li>绉佹湁鍖栨暟鎹缁冿紝瀹夊叏鍚堣</li>
+          <li>AI 智能识别并自动填写表单</li>
+          <li>文档智能总结与摘要生成</li>
+          <li>业务异常自动识别并预警</li>
+          <li>私有化数据训练，安全合规</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">棰勭害婕旂ず</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">鏁版嵁闆嗘垚</div>
-        <div class="pc-icon">馃彮</div>
-        <div class="pc-title">鏁版嵁宸ュ巶</div>
+        <div class="pc-badge">数据集成</div>
+        <div class="pc-icon">🏭</div>
+        <div class="pc-title">数据工厂</div>
         <div class="pc-desc">
-          浼佷笟绾ф暟鎹瀺鍚堜笌璁＄畻骞冲彴锛屾敮鎸佸琛ㄥ叧鑱斻€佽仛鍚堣绠椼€佹暟鎹竻娲楋紝鍐呯疆 MySQL / API / 鏂囦欢绛夎繛鎺ュ櫒锛岄浂浠ｇ爜鎵撻€氭暟鎹宀涖€?
+          企业级数据融合与计算平台，支持多表关联、聚合计算、数据清洗，内置 MySQL / API / 文件等连接器，零代码打通数据孤岛。
         </div>
         <ul class="pc-features">
-          <li>澶氭簮鏁版嵁铻嶅悎锛岄浂浠ｇ爜 ETL</li>
-          <li>鏀寔 MySQL銆丱racle銆丄PI 绛夋帴鍏?/li>
-          <li>澶嶆潅璁＄畻閫昏緫鍙鍖栭厤缃?/li>
-          <li>瀹氭椂浠诲姟鑷姩鎵ц鏁版嵁澶勭悊</li>
+          <li>多源数据融合，零代码 ETL</li>
+          <li>支持 MySQL、Oracle、API 等接入</li>
+          <li>复杂计算逻辑可视化配置</li>
+          <li>定时任务自动执行数据处理</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">棰勭害婕旂ず</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">鍥㈤槦鍗忎綔</div>
-        <div class="pc-icon">馃摎</div>
-        <div class="pc-title">鐭ヨ瘑搴?/div>
+        <div class="pc-badge">团队协作</div>
+        <div class="pc-icon">📚</div>
+        <div class="pc-title">知识库</div>
         <div class="pc-desc">
-          浼佷笟绾у湪绾挎枃妗ｄ笌 Wiki 骞冲彴锛屾敮鎸佸浜哄疄鏃跺崗浣滅紪杈戙€佺増鏈巻鍙层€佹潈闄愮鎺э紝璁╁洟闃熺煡璇嗘矇娣€鏈夊簭锛屾柊浜轰笂鎵嬫晥鐜囨彁鍗?50%銆?
+          企业级在线文档与 Wiki 平台，支持多人实时协作编辑、版本历史、权限管控，让团队知识沉淀有序，新人上手效率提升 50%。
         </div>
         <ul class="pc-features">
-          <li>澶氫汉瀹炴椂鍗忎綔缂栬緫鏂囨。</li>
-          <li>鏍戝舰鐩綍缁撴瀯锛岀煡璇嗘湁搴忔矇娣€</li>
-          <li>缁嗙矑搴︽潈闄愶紝閮ㄩ棬闅旂绠℃帶</li>
-          <li>瀵屾枃鏈?+ Markdown 鍙屾ā寮?/li>
+          <li>多人实时协作编辑文档</li>
+          <li>树形目录结构，知识有序沉淀</li>
+          <li>细粒度权限，部门隔离管控</li>
+          <li>富文本 + Markdown 双模式</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">鍏嶈垂浣跨敤</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">棰勭害婕旂ず</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- 浠锋牸鍖?-->
+  <!-- 价格区 -->
   <section style="background:var(--bg-dark);">
     <div class="text-center">
-      <div class="section-tag">鐗堟湰涓庝环鏍?/div>
-      <h2 class="section-title">閫夋嫨閫傚悎鎮ㄥ洟闃熺殑鏂规</h2>
-      <p class="section-sub">浠庝釜浜哄厤璐圭増鍒颁紒涓氱鏈夊寲閮ㄧ讲锛岀伒娲绘弧瓒冲悇绫昏妯￠渶姹傘€?/p>
+      <div class="section-tag">版本与价格</div>
+      <h2 class="section-title">选择适合您团队的方案</h2>
+      <p class="section-sub">从个人免费版到企业私有化部署，灵活满足各类规模需求。</p>
     </div>
     <div class="price-grid">
       <div class="price-card fade-in">
-        <div class="price-name">鍏嶈垂鐗?/div>
-        <div class="price-num">楼0 <span>/ 姘镐箙</span></div>
-        <div class="price-desc">閫傚悎涓汉鍙婂皬鍥㈤槦璇曠敤</div>
+        <div class="price-name">免费版</div>
+        <div class="price-num">¥0 <span>/ 永久</span></div>
+        <div class="price-desc">适合个人及小团队试用</div>
         <ul class="price-features">
-          <li>3 鍚嶆垚鍛?/li>
-          <li>鍩虹琛ㄥ崟涓庢祦绋?/li>
-          <li>1,000 鏉℃暟鎹瓨鍌?/li>
-          <li>绀惧尯鏀寔</li>
+          <li>3 名成员</li>
+          <li>基础表单与流程</li>
+          <li>1,000 条数据存储</li>
+          <li>社区支持</li>
         </ul>
-        <a href="#" data-page="contact" class="btn btn-outline">鍏嶈垂娉ㄥ唽</a>
+        <a href="#" data-page="contact" class="btn btn-outline">免费注册</a>
       </div>
       <div class="price-card hot fade-in">
-        <div class="price-hot-badge">馃敟 鏈€鍙楁杩?/div>
-        <div class="price-name">涓撲笟鐗?/div>
-        <div class="price-num">楼599 <span>/ 鏈堣捣</span></div>
-        <div class="price-desc">閫傚悎鎴愰暱鍨嬪洟闃燂紝瑙ｉ攣鍏ㄩ儴鏍稿績鍔熻兘</div>
+        <div class="price-hot-badge">🔥 最受欢迎</div>
+        <div class="price-name">专业版</div>
+        <div class="price-num">¥599 <span>/ 月起</span></div>
+        <div class="price-desc">适合成长型团队，解锁全部核心功能</div>
         <ul class="price-features">
-          <li>20 鍚嶆垚鍛橈紙鍙墿鍏咃級</li>
-          <li>鍏ㄩ儴鍔熻兘妯″潡瑙ｉ攣</li>
-          <li>鏅鸿兘鍔╂墜 Pro</li>
-          <li>鏁版嵁宸ュ巶 & 楂樼骇鍒嗘瀽</li>
-          <li>API 闆嗘垚涓?Webhook</li>
-          <li>涓撳睘瀹㈡湇鍝嶅簲</li>
+          <li>20 名成员（可扩充）</li>
+          <li>全部功能模块解锁</li>
+          <li>智能助手 Pro</li>
+          <li>数据工厂 & 高级分析</li>
+          <li>API 集成与 Webhook</li>
+          <li>专属客服响应</li>
         </ul>
-        <a href="#" data-page="contact" class="btn btn-primary">绔嬪嵆璐拱</a>
+        <a href="#" data-page="contact" class="btn btn-primary">立即购买</a>
       </div>
       <div class="price-card fade-in">
-        <div class="price-name">鏃楄埌鐗?/ 绉佹湁鍖?/div>
-        <div class="price-num">瀹氬埗 <span>璇环</span></div>
-        <div class="price-desc">閫傚悎澶у瀷浼佷笟鍙婇珮鍚堣琛屼笟</div>
+        <div class="price-name">旗舰版 / 私有化</div>
+        <div class="price-num">定制 <span>询价</span></div>
+        <div class="price-desc">适合大型企业及高合规行业</div>
         <ul class="price-features">
-          <li>涓嶉檺鎴愬憳</li>
-          <li>绉佹湁鍖栫嫭绔嬮儴缃?/li>
-          <li>鏁版嵁瀹屽叏鑷富鎺屾帶</li>
-          <li>瀹氬埗鍖栧紑鍙戞敮鎸?/li>
-          <li>1v1 瀹㈡埛鎴愬姛缁忕悊</li>
-          <li>SLA 淇濋殰鍗忚</li>
+          <li>不限成员</li>
+          <li>私有化独立部署</li>
+          <li>数据完全自主掌控</li>
+          <li>定制化开发支持</li>
+          <li>1v1 客户成功经理</li>
+          <li>SLA 保障协议</li>
         </ul>
-        <a href="#" data-page="contact" class="btn btn-outline">鑱旂郴閿€鍞?/a>
+        <a href="#" data-page="contact" class="btn btn-outline">联系销售</a>
       </div>
     </div>
   </section>
@@ -503,12 +503,12 @@
   <!-- CTA -->
   <section style="padding:40px 5% 96px;">
     <div class="cta-banner fade-in">
-      <div class="section-tag">绔嬪嵆琛屽姩</div>
-      <h2 class="section-title">240 涓? 浼佷笟鐨勯€夋嫨锛岀幇鍦ㄨ疆鍒版偍浜?/h2>
-      <p>娉ㄥ唽鍗抽€?14 澶╀笓涓氱増浣撻獙锛屽叏鍔熻兘鍏嶈垂璇曠敤锛屾棤闇€淇＄敤鍗°€?/p>
+      <div class="section-tag">立即行动</div>
+      <h2 class="section-title">240 万+ 企业的选择，现在轮到您了</h2>
+      <p>注册即送 14 天专业版体验，全功能免费试用，无需信用卡。</p>
       <div class="cta-actions">
-        <a href="#" data-page="contact" class="btn btn-primary">鍏嶈垂娉ㄥ唽浣撻獙</a>
-        <a href="#" data-page="contact" class="btn btn-outline">棰勭害涓€瀵逛竴婕旂ず</a>
+        <a href="#" data-page="contact" class="btn btn-primary">免费注册体验</a>
+        <a href="#" data-page="contact" class="btn btn-outline">预约一对一演示</a>
       </div>
     </div>
   </section>
@@ -521,9 +521,9 @@
 <div id="page-contact" class="page">
 
   <div class="page-banner">
-    <div class="section-tag">鑱旂郴鎴戜滑</div>
-    <h1 class="section-title">涓庣畝閬撲簯涓撳鐩存帴瀵硅瘽</h1>
-    <p>濉啓淇℃伅锛屼笓灞為【闂?2 灏忔椂鍐呭洖璁匡紝涓烘偍瀹氬埗涓撳睘鎼缓鏂规锛屽厤璐规紨绀哄叏娴佺▼銆?/p>
+    <div class="section-tag">联系我们</div>
+    <h1 class="section-title">与简道云专家直接对话</h1>
+    <p>填写信息，专属顾问 2 小时内回访，为您定制专属搭建方案，免费演示全流程。</p>
   </div>
 
   <section>
@@ -532,114 +532,114 @@
       <!-- Left: Info -->
       <div class="contact-info fade-in">
         <div>
-          <h2>寮€鍚偍鐨勯浂浠ｇ爜涔嬫梾</h2>
-          <p>鏃犺鎮ㄦ槸鎯充簡瑙ｅ叿浣撳姛鑳姐€佽璁轰环鏍兼柟妗堬紝杩樻槸闇€瑕佺幇鍦哄疄鏂芥敮鎸侊紝鎴戜滑鐨勪笓瀹堕殢鏃跺緟鍛姐€?/p>
+          <h2>开启您的零代码之旅</h2>
+          <p>无论您是想了解具体功能、讨论价格方案，还是需要现场实施支持，我们的专家随时待命。</p>
         </div>
 
         <div class="contact-items">
           <div class="contact-item">
-            <div class="ci-icon">馃摓</div>
+            <div class="ci-icon">📞</div>
             <div class="ci-text">
-              <strong>閿€鍞儹绾?/strong>
-              <span>400-101-1890锛堝伐浣滄棩 9:00鈥?8:00锛?/span>
+              <strong>销售热线</strong>
+              <span>400-101-1890（工作日 9:00–18:00）</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">鉁夛笍</div>
+            <div class="ci-icon">✉️</div>
             <div class="ci-text">
-              <strong>鍟嗗姟閭</strong>
+              <strong>商务邮箱</strong>
               <span>sales@jiandaoyun.com</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">馃搷</div>
+            <div class="ci-icon">📍</div>
             <div class="ci-text">
-              <strong>鍏徃鍦板潃</strong>
-              <span>姹熻嫃鐪佸崡浜競鏍栭湠鍖哄竼杞蒋浠跺洯</span>
+              <strong>公司地址</strong>
+              <span>江苏省南京市栖霞区帆软软件园</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="ci-icon">鈿?/div>
+            <div class="ci-icon">⚡</div>
             <div class="ci-text">
-              <strong>鍝嶅簲鎵胯</strong>
-              <span>宸ヤ綔鏃?2 灏忔椂鍐呬笓灞為【闂洖璁?/span>
+              <strong>响应承诺</strong>
+              <span>工作日 2 小时内专属顾问回访</span>
             </div>
           </div>
         </div>
 
         <div style="padding:24px;background:rgba(22,100,255,0.08);border:1px solid rgba(22,100,255,0.2);border-radius:12px;">
           <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.8;">
-            馃巵 <strong style="color:var(--text-main);">闄愭椂绂忓埄锛?/strong>
-            鐜板湪娉ㄥ唽鍗充韩 <strong style="color:#1664FF;">14 澶╀笓涓氱増鍏ㄥ姛鑳?/strong>鍏嶈垂浣撻獙锛岄檮璧犱笓灞炲疄鏂介【闂?1 瀵?1 闄窇锛屽府鎮?5 鍒嗛挓鎼缓绗竴涓笟鍔″簲鐢ㄣ€?
+            🎁 <strong style="color:var(--text-main);">限时福利：</strong>
+            现在注册即享 <strong style="color:#1664FF;">14 天专业版全功能</strong>免费体验，附赠专属实施顾问 1 对 1 陪跑，帮您 5 分钟搭建第一个业务应用。
           </p>
         </div>
       </div>
 
       <!-- Right: Form -->
       <div class="form-card fade-in">
-        <h3>鍏嶈垂鑾峰彇涓撳睘婕旂ず</h3>
-        <p>濉啓淇℃伅锛岄【闂皢涓诲姩鑱旂郴鎮紝鏍规嵁鎮ㄧ殑涓氬姟鍦烘櫙瀹氬埗婕旂ず鍐呭銆?/p>
+        <h3>免费获取专属演示</h3>
+        <p>填写信息，顾问将主动联系您，根据您的业务场景定制演示内容。</p>
 
         <form id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="f-name">濮撳悕 <span>*</span></label>
-              <input type="text" id="f-name" name="name" placeholder="璇疯緭鍏ユ偍鐨勫鍚? autocomplete="name" />
+              <label for="f-name">姓名 <span>*</span></label>
+              <input type="text" id="f-name" name="name" placeholder="请输入您的姓名" autocomplete="name" />
             </div>
             <div class="form-group">
-              <label for="f-phone">鎵嬫満鍙?<span>*</span></label>
-              <input type="tel" id="f-phone" name="phone" placeholder="璇疯緭鍏ユ墜鏈哄彿" autocomplete="tel" maxlength="11" />
+              <label for="f-phone">手机号 <span>*</span></label>
+              <input type="tel" id="f-phone" name="phone" placeholder="请输入手机号" autocomplete="tel" maxlength="11" />
             </div>
           </div>
           <div class="form-group">
-            <label for="f-company">鍏徃鍚嶇О <span>*</span></label>
-            <input type="text" id="f-company" name="company" placeholder="璇疯緭鍏ュ叕鍙稿叏绉? autocomplete="organization" />
+            <label for="f-company">公司名称 <span>*</span></label>
+            <input type="text" id="f-company" name="company" placeholder="请输入公司全称" autocomplete="organization" />
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="f-position">鑱屼綅</label>
-              <input type="text" id="f-position" name="position" placeholder="鎮ㄧ殑鑱屼綅锛堥€夊～锛? />
+              <label for="f-position">职位</label>
+              <input type="text" id="f-position" name="position" placeholder="您的职位（选填）" />
             </div>
             <div class="form-group">
-              <label for="f-scale">鍏徃瑙勬ā</label>
+              <label for="f-scale">公司规模</label>
               <select id="f-scale" name="scale">
-                <option value="">璇烽€夋嫨</option>
-                <option>1鈥?0 浜?/option>
-                <option>51鈥?00 浜?/option>
-                <option>201鈥?000 浜?/option>
-                <option>1000 浜轰互涓?/option>
+                <option value="">请选择</option>
+                <option>1–50 人</option>
+                <option>51–200 人</option>
+                <option>201–1000 人</option>
+                <option>1000 人以上</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label for="f-need">鎰熷叴瓒ｇ殑鍔熻兘</label>
+            <label for="f-need">感兴趣的功能</label>
             <select id="f-need" name="need">
-              <option value="">璇烽€夋嫨鍔熻兘妯″潡锛堥€夊～锛?/option>
-              <option>琛ㄥ崟鏁版嵁鏀堕泦</option>
-              <option>娴佺▼瀹℃壒绠＄悊</option>
-              <option>鏁版嵁鍒嗘瀽浠〃鐩?/option>
-              <option>鏅鸿兘鍔╂墜 Pro锛圓I锛?/option>
-              <option>鏁版嵁宸ュ巶 / 绯荤粺闆嗘垚</option>
-              <option>绉佹湁鍖栭儴缃?/option>
-              <option>鏁翠綋鏁板瓧鍖栬В鍐虫柟妗?/option>
+              <option value="">请选择功能模块（选填）</option>
+              <option>表单数据收集</option>
+              <option>流程审批管理</option>
+              <option>数据分析仪表盘</option>
+              <option>智能助手 Pro（AI）</option>
+              <option>数据工厂 / 系统集成</option>
+              <option>私有化部署</option>
+              <option>整体数字化解决方案</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="f-scene">涓氬姟鍦烘櫙鎻忚堪</label>
-            <textarea id="f-scene" name="scene" placeholder="绠€鍗曟弿杩版偍鎯崇敤绠€閬撲簯瑙ｅ喅浠€涔堥棶棰橈紝渚嬪锛氭兂鎼缓涓€濂楄繘閿€瀛樼鐞嗙郴缁燂紙閫夊～锛?></textarea>
+            <label for="f-scene">业务场景描述</label>
+            <textarea id="f-scene" name="scene" placeholder="简单描述您想用简道云解决什么问题，例如：想搭建一套进销存管理系统（选填）"></textarea>
           </div>
-          <button type="submit" class="submit-btn">绔嬪嵆棰勭害鍏嶈垂婕旂ず</button>
+          <button type="submit" class="submit-btn">立即预约免费演示</button>
           <p style="font-size:0.8rem;color:var(--text-muted);margin-top:12px;text-align:center;">
-            鎻愪氦鍗宠〃绀烘偍鍚屾剰绠€閬撲簯 <a href="#" style="color:var(--primary-light);">闅愮鏀跨瓥</a>锛屾垜浠壙璇轰繚鎶ゆ偍鐨勬暟鎹畨鍏ㄣ€?
+            提交即表示您同意简道云 <a href="#" style="color:var(--primary-light);">隐私政策</a>，我们承诺保护您的数据安全。
           </p>
         </form>
 
         <div id="formSuccess" class="form-success">
-          <div class="success-icon">馃帀</div>
-          <h4>鎻愪氦鎴愬姛锛?/h4>
-          <p>鎰熻阿鎮ㄧ殑淇′换锛佹垜浠殑涓撳睘椤鹃棶灏嗗湪 <strong>2 灏忔椂鍐?/strong>涓诲姩鑱旂郴鎮紝璇蜂繚鎸佹墜鏈虹晠閫氥€?br/>鍦ㄦ鏈熼棿鎮ㄤ篃鍙互鍏堝厤璐规敞鍐屼綋楠屻€?/p>
+          <div class="success-icon">🎉</div>
+          <h4>提交成功！</h4>
+          <p>感谢您的信任！我们的专属顾问将在 <strong>2 小时内</strong>主动联系您，请保持手机畅通。<br/>在此期间您也可以先免费注册体验。</p>
           <br/>
-          <a href="#" data-page="products" class="btn btn-outline btn-sm" style="margin-top:8px;">鏌ョ湅浜у搧鍔熻兘</a>
+          <a href="#" data-page="products" class="btn btn-outline btn-sm" style="margin-top:8px;">查看产品功能</a>
         </div>
       </div>
 
@@ -655,45 +655,45 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="jdy-logo-wrap" style="margin-bottom:12px;">
-        <div class="jdy-logo-icon">绠€</div>
-        <span style="font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">绠€閬撲簯</span>
+        <div class="jdy-logo-icon">简</div>
+        <span style="font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">简道云</span>
       </div>
-      <p>甯嗚蒋鏃椾笅闆朵唬鐮佸簲鐢ㄦ惌寤哄钩鍙帮紝杩炵画 4 骞翠腑鍥藉競鍦哄崰鏈夌巼绗竴锛?40 涓? 浼佷笟淇¤禆涔嬮€夈€?/p>
+      <p>帆软旗下零代码应用搭建平台，连续 4 年中国市场占有率第一，240 万+ 企业信赖之选。</p>
     </div>
     <div class="footer-col">
-      <h4>浜у搧鍔熻兘</h4>
+      <h4>产品功能</h4>
       <ul>
-        <li><a href="#" data-page="products">琛ㄥ崟璁捐鍣?/a></li>
-        <li><a href="#" data-page="products">娴佺▼寮曟搸</a></li>
-        <li><a href="#" data-page="products">鍒嗘瀽浠〃鐩?/a></li>
-        <li><a href="#" data-page="products">鏅鸿兘鍔╂墜 Pro</a></li>
-        <li><a href="#" data-page="products">鏁版嵁宸ュ巶</a></li>
+        <li><a href="#" data-page="products">表单设计器</a></li>
+        <li><a href="#" data-page="products">流程引擎</a></li>
+        <li><a href="#" data-page="products">分析仪表盘</a></li>
+        <li><a href="#" data-page="products">智能助手 Pro</a></li>
+        <li><a href="#" data-page="products">数据工厂</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>瑙ｅ喅鏂规</h4>
+      <h4>解决方案</h4>
       <ul>
-        <li><a href="#" data-page="products">杩涢攢瀛樼鐞?/a></li>
-        <li><a href="#" data-page="products">CRM 绯荤粺</a></li>
-        <li><a href="#" data-page="products">鐢熶骇绠＄悊</a></li>
-        <li><a href="#" data-page="products">浜轰簨 OA</a></li>
-        <li><a href="#" data-page="products">绉佹湁鍖栭儴缃?/a></li>
+        <li><a href="#" data-page="products">进销存管理</a></li>
+        <li><a href="#" data-page="products">CRM 系统</a></li>
+        <li><a href="#" data-page="products">生产管理</a></li>
+        <li><a href="#" data-page="products">人事 OA</a></li>
+        <li><a href="#" data-page="products">私有化部署</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>鏀寔涓庢湇鍔?/h4>
+      <h4>支持与服务</h4>
       <ul>
-        <li><a href="#" data-page="contact">鍏嶈垂娉ㄥ唽</a></li>
-        <li><a href="#" data-page="contact">棰勭害婕旂ず</a></li>
-        <li><a href="#" data-page="contact">浠锋牸鍜ㄨ</a></li>
-        <li><a href="#">甯姪鏂囨。</a></li>
-        <li><a href="#">鍔犲叆鎴戜滑</a></li>
+        <li><a href="#" data-page="contact">免费注册</a></li>
+        <li><a href="#" data-page="contact">预约演示</a></li>
+        <li><a href="#" data-page="contact">价格咨询</a></li>
+        <li><a href="#">帮助文档</a></li>
+        <li><a href="#">加入我们</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>漏 2026 绠€閬撲簯锛堝竼杞蒋浠舵湁闄愬叕鍙革級淇濈暀鎵€鏈夋潈鍒┿€?/p>
-    <p>鍗椾含 路 鍖椾含 路 涓婃捣 路 娣卞湷 路 鎴愰兘</p>
+    <p>© 2026 简道云（帆软软件有限公司）保留所有权利。</p>
+    <p>南京 · 北京 · 上海 · 深圳 · 成都</p>
   </div>
 </footer>
 
