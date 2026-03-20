@@ -353,7 +353,7 @@ section { padding: 96px 5%; }
   display: flex; align-items: center; gap: 8px;
 }
 .pc-features li::before {
-  content: '鉁?; color: var(--accent);
+  content: '✓'; color: var(--accent);
   font-size: 0.8rem; flex-shrink: 0;
 }
 
