@@ -3,27 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>简道云 · 零代码应用搭建平台</title>
-  <meta name="description" content="简道云是帆软旗下零代码轻量级应用搭建平台，240万+企业使用，提供表单、流程、仪表盘、数据工厂等功能，5分钟搭建业务管理系统。" />
+  <title>金蝶AI税务云 · 智能税务管理平台</title>
+  <meta name="description" content="金蝶AI税务云是金蝶集团旗下智能税务管理平台，提供AI记账、AI报税、AI财务分析、AI智能取票、AI智能获取银行流水等核心功能，助力企业税务数字化转型。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* 简道云品牌色覆盖 */
+    /* 金蝶品牌色 */
     :root {
       --primary: #1664FF;
       --primary-dark: #0d4fd4;
       --primary-light: #4285ff;
       --accent: #00CFFF;
     }
-    /* Logo区特殊样式 */
-    .jdy-logo-wrap { display:flex; align-items:center; gap:8px; }
-    .jdy-logo-icon {
-      width:32px; height:32px; border-radius:8px;
-      background: linear-gradient(135deg,#1664FF,#00CFFF);
-      display:flex; align-items:center; justify-content:center;
-      font-size:1rem; color:#fff; font-weight:800;
+    /* Logo区样式 */
+    .jdy-logo-wrap { display:flex; align-items:center; gap:10px; }
+    .jdy-logo-img {
+      width:36px; height:36px; border-radius:8px;
+      object-fit:contain; display:block;
     }
+    .jdy-logo-butterfly {
+      width:36px; height:36px; border-radius:8px;
+      background: linear-gradient(135deg,#1664FF 0%,#00CFFF 100%);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+    }
+    .jdy-logo-butterfly svg { width:24px; height:24px; }
     /* 产品功能 tab */
     .func-tabs { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:40px; }
     .func-tab {
@@ -94,6 +99,12 @@
     .price-features { list-style:none; display:flex; flex-direction:column; gap:10px; margin:8px 0; flex:1; }
     .price-features li { font-size:0.87rem; color:var(--text-muted); display:flex; align-items:center; gap:8px; }
     .price-features li::before { content:'✓'; color:var(--accent); flex-shrink:0; }
+
+    /* 蝴蝶Logo SVG */
+    .butterfly-logo {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:36px; height:36px;
+    }
   </style>
 </head>
 <body>
@@ -101,14 +112,23 @@
 <!-- ===== Navbar ===== -->
 <nav class="navbar">
   <a class="jdy-logo-wrap" href="#" data-page="home" style="text-decoration:none;">
-    <div class="jdy-logo-icon">简</div>
-    <span style="font-size:1.15rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">简道云</span>
+    <div class="jdy-logo-butterfly">
+      <!-- 金蝶账无忧蝴蝶 Logo SVG -->
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 24 C18 16, 6 14, 6 24 C6 32, 16 34, 24 28" fill="rgba(255,255,255,0.9)"/>
+        <path d="M24 24 C30 16, 42 14, 42 24 C42 32, 32 34, 24 28" fill="rgba(255,255,255,0.7)"/>
+        <path d="M24 24 C18 30, 8 32, 10 38 C12 42, 20 40, 24 34" fill="rgba(255,255,255,0.6)"/>
+        <path d="M24 24 C30 30, 40 32, 38 38 C36 42, 28 40, 24 34" fill="rgba(255,255,255,0.5)"/>
+        <circle cx="24" cy="26" r="2.5" fill="white"/>
+      </svg>
+    </div>
+    <span style="font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">金蝶AI税务云</span>
   </a>
   <div class="nav-links">
     <a href="#" data-page="home" class="active">首页</a>
     <a href="#" data-page="products">产品功能</a>
     <a href="#" data-page="contact">联系我们</a>
-    <a href="#" data-page="contact" class="nav-cta">免费使用</a>
+    <a href="#" data-page="contact" class="nav-cta">免费体验</a>
   </div>
   <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
@@ -118,7 +138,7 @@
   <a href="#" data-page="home">首页</a>
   <a href="#" data-page="products">产品功能</a>
   <a href="#" data-page="contact">联系我们</a>
-  <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+  <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费体验</a>
 </div>
 
 <!-- ==================== HOME PAGE ==================== -->
@@ -128,35 +148,35 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-badge">
-        <span></span> 连续 4 年中国零代码市场占有率第一
+        <span></span> 金蝶集团旗下 · 智能税务管理平台
       </div>
       <h1>
-        零代码搭建<br>
-        <span class="gradient-text">企业管理系统</span>
+        AI驱动税务全流程<br>
+        <span class="gradient-text">智能税务管理云平台</span>
       </h1>
       <p class="hero-desc">
-        无需编程基础，像搭积木一样，5 分钟构建进销存、CRM、生产管理、审批流程等企业应用。帆软旗下，240 万+ 企业的共同选择。
+        金蝶AI税务云基于大模型AI技术，提供AI记账、AI报税、AI财务分析、智能取票、智能银行流水等核心能力，帮助企业实现税务数字化、智能化升级，降低合规风险，提升财税效率。
       </p>
       <div class="hero-actions">
-        <a href="#" data-page="contact" class="btn btn-primary">免费注册使用</a>
+        <a href="#" data-page="contact" class="btn btn-primary">免费预约演示</a>
         <a href="#" data-page="products" class="btn btn-outline">查看产品功能</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num">240万+</span>
-          <span class="stat-label">注册企业组织</span>
+          <span class="stat-num">50万+</span>
+          <span class="stat-label">服务企业客户</span>
         </div>
         <div class="stat">
-          <span class="stat-num">5 分钟</span>
-          <span class="stat-label">快速搭建应用</span>
+          <span class="stat-num">99.9%</span>
+          <span class="stat-label">报税准确率</span>
         </div>
         <div class="stat">
-          <span class="stat-num">0 行</span>
-          <span class="stat-label">代码需求</span>
+          <span class="stat-num">80%</span>
+          <span class="stat-label">财税效率提升</span>
         </div>
         <div class="stat">
-          <span class="stat-num">4 年 #1</span>
-          <span class="stat-label">市场占有率</span>
+          <span class="stat-num">30年+</span>
+          <span class="stat-label">金蝶品牌积淀</span>
         </div>
       </div>
     </div>
@@ -173,51 +193,46 @@
       <div class="client-logo-item">中国平安</div>
       <div class="client-logo-item">华为技术</div>
       <div class="client-logo-item">招商银行</div>
-      <div class="client-logo-item">美团外卖</div>
+      <div class="client-logo-item">比亚迪</div>
       <div class="client-logo-item">中国石化</div>
       <div class="client-logo-item">顺丰速运</div>
-      <div class="client-logo-item">蔚来汽车</div>
-      <div class="client-logo-item">字节跳动</div>
+      <div class="client-logo-item">万科集团</div>
+      <div class="client-logo-item">腾讯科技</div>
     </div>
   </div>
 
-  <!-- 四大核心功能 -->
+  <!-- 五大核心功能 -->
   <section class="features">
     <div class="text-center">
-      <div class="section-tag">四大核心模块</div>
-      <h2 class="section-title">一个平台，覆盖企业全部管理需求</h2>
-      <p class="section-sub">表单收集、流程审批、数据分析、知识沉淀，全部在简道云一站搞定。</p>
+      <div class="section-tag">五大核心产品</div>
+      <h2 class="section-title">AI赋能，覆盖企业税务全流程</h2>
+      <p class="section-sub">从记账到报税，从取票到银行流水，金蝶AI税务云一站式解决企业财税痛点。</p>
     </div>
     <div class="features-grid">
       <div class="feature-card fade-in">
-        <div class="feature-icon">📋</div>
-        <h3>表单与数据收集</h3>
-        <p>拖拽配置 30+ 字段类型，支持条件显示、关联数据、公式计算。PC + 移动端同步，随时随地录入数据。</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔄</div>
-        <h3>流程引擎与审批</h3>
-        <p>可视化配置审批节点，支持会签、或签、条件分支、自动触发。钉钉 / 企微 / 微信消息实时推送。</p>
+        <div class="feature-icon">📒</div>
+        <h3>AI记账</h3>
+        <p>基于大模型AI自动识别凭证、智能归类科目、自动生成记账分录，准确率超99%，告别繁琐手工录入，财务效率提升80%。</p>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-icon">📊</div>
-        <h3>仪表盘与数据分析</h3>
-        <p>10+ 图表类型，实时更新，支持跨表联动分析。NL2SQL 自然语言查询，业务人员也能看懂数据。</p>
+        <h3>AI报税</h3>
+        <p>智能采集申报数据，自动填报增值税、企业所得税、个人所得税等多税种申报表，一键提交，合规零风险，报税效率提升90%。</p>
       </div>
       <div class="feature-card fade-in">
         <div class="feature-icon">🤖</div>
-        <h3>智能助手 Pro</h3>
-        <p>AI 自动填写、智能总结、异常预警，让重复工作交给 AI，人专注于更有价值的决策与创造。</p>
+        <h3>AI财务分析</h3>
+        <p>AI深度解读财务数据，自动生成资产负债、利润分析、现金流等报表，提供智能预警和经营洞察，辅助管理层高效决策。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">🏭</div>
-        <h3>数据工厂</h3>
-        <p>多表数据融合计算，复杂业务逻辑零代码配置，打通各业务系统孤岛，构建企业级数据中台。</p>
+        <div class="feature-icon">🧾</div>
+        <h3>AI智能取票</h3>
+        <p>自动从税务平台、邮件、微信等多渠道智能抓取发票，OCR识别率99.9%，自动验真查重，发票管理全程无需人工干预。</p>
       </div>
       <div class="feature-card fade-in">
-        <div class="feature-icon">📚</div>
-        <h3>知识库与协同</h3>
-        <p>在线文档、Wiki、通知公告，团队知识沉淀与共享，支持多人实时协作编辑，权限精细化管控。</p>
+        <div class="feature-icon">🏦</div>
+        <h3>AI智能获取银行流水</h3>
+        <p>对接100+主流银行，自动拉取银行流水并智能分类，实时监控资金动态，银企对账零误差，资金管理一目了然。</p>
       </div>
     </div>
   </section>
@@ -225,50 +240,50 @@
   <!-- 应用场景 -->
   <section style="background:var(--bg-dark);">
     <div class="text-center">
-      <div class="section-tag">应用场景</div>
-      <h2 class="section-title">覆盖 20+ 行业，500+ 业务场景</h2>
-      <p class="section-sub">无论您在哪个行业，都能找到开箱即用的模板快速启动。</p>
+      <div class="section-tag">适用场景</div>
+      <h2 class="section-title">覆盖多行业，满足企业全场景税务需求</h2>
+      <p class="section-sub">无论是中小企业还是大型集团，金蝶AI税务云都能提供精准匹配的解决方案。</p>
     </div>
     <div class="scene-grid">
       <div class="scene-card fade-in">
-        <div class="s-icon">🏪</div>
-        <h4>进销存管理</h4>
-        <p>采购入库、销售出库、库存预警、供应商管理，全流程线上化。</p>
-      </div>
-      <div class="scene-card fade-in">
-        <div class="s-icon">👥</div>
-        <h4>CRM 客户管理</h4>
-        <p>客户跟进、商机管理、合同审批、回款提醒，销售全程可追踪。</p>
-      </div>
-      <div class="scene-card fade-in">
-        <div class="s-icon">🏭</div>
-        <h4>生产制造管理</h4>
-        <p>工单派发、质检记录、设备点检、产能统计，工厂数字化一步到位。</p>
-      </div>
-      <div class="scene-card fade-in">
-        <div class="s-icon">🧑‍💼</div>
-        <h4>人事 OA 管理</h4>
-        <p>请假审批、报销流程、考勤打卡、绩效考核，HR 工作效率翻倍。</p>
+        <div class="s-icon">🏢</div>
+        <h4>中小企业财税管理</h4>
+        <p>一体化财税解决方案，AI自动记账报税，低成本实现专业财务管理。</p>
       </div>
       <div class="scene-card fade-in">
         <div class="s-icon">🏗️</div>
-        <h4>项目管理</h4>
-        <p>任务分配、进度跟踪、甘特图、风险台账，项目全生命周期掌控。</p>
+        <h4>建筑房地产行业</h4>
+        <p>多项目核算、跨地区税务统筹，自动处理增值税预缴，合规无忧。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">🎓</div>
-        <h4>教育培训管理</h4>
-        <p>报名收集、课程安排、学员档案、考试评分，校务管理更高效。</p>
+        <div class="s-icon">🏭</div>
+        <h4>制造业企业</h4>
+        <p>进项发票智能取票、出口退税自动申报，供应链税务全流程数字化。</p>
+      </div>
+      <div class="scene-card fade-in">
+        <div class="s-icon">🛒</div>
+        <h4>零售电商行业</h4>
+        <p>多平台销售数据自动汇总，智能开票，跨境税务合规一键处理。</p>
+      </div>
+      <div class="scene-card fade-in">
+        <div class="s-icon">🏦</div>
+        <h4>金融服务机构</h4>
+        <p>银行流水智能采集，资金实时监控，金融业务税务核算精准合规。</p>
       </div>
       <div class="scene-card fade-in">
         <div class="s-icon">🏥</div>
-        <h4>医疗健康管理</h4>
-        <p>患者信息、检查记录、耗材管理、排班安排，合规高效运转。</p>
+        <h4>医疗健康行业</h4>
+        <p>医疗发票智能识别、税收优惠政策自动匹配，财税合规高效管理。</p>
       </div>
       <div class="scene-card fade-in">
-        <div class="s-icon">🏢</div>
-        <h4>行政后勤管理</h4>
-        <p>会议室预约、资产领用、访客登记、固定资产管理，一表管全局。</p>
+        <div class="s-icon">🎓</div>
+        <h4>教育培训机构</h4>
+        <p>学费收据智能归集，免税收入精确核算，教育行业税务无忧。</p>
+      </div>
+      <div class="scene-card fade-in">
+        <div class="s-icon">🌐</div>
+        <h4>跨国集团企业</h4>
+        <p>多币种账务处理、跨境税务合规、集团合并报表一站式解决。</p>
       </div>
     </div>
   </section>
@@ -276,27 +291,27 @@
   <!-- 产品入口 -->
   <section class="products-home">
     <div class="text-center">
-      <div class="section-tag">产品矩阵</div>
-      <h2 class="section-title">从轻量到企业级，按需选择</h2>
-      <p class="section-sub">个人免费版到企业旗舰版，满足不同规模团队需求。</p>
+      <div class="section-tag">产品方案</div>
+      <h2 class="section-title">按需选择，灵活部署</h2>
+      <p class="section-sub">从初创企业到大型集团，金蝶AI税务云提供专属方案。</p>
     </div>
     <div class="products-home-grid">
       <div class="product-entry-card fade-in">
-        <div class="pec-icon">🆓</div>
-        <div class="pec-title">免费版</div>
-        <div class="pec-desc">永久免费，3 名成员，基础表单与流程功能，适合个人和小团队快速上手体验简道云核心能力。</div>
-        <a href="#" data-page="contact" class="btn btn-outline btn-sm">立即免费注册 →</a>
+        <div class="pec-icon">🚀</div>
+        <div class="pec-title">标准版</div>
+        <div class="pec-desc">适合中小企业，覆盖AI记账、AI报税、AI智能取票核心功能，快速上手，轻松实现税务数字化。</div>
+        <a href="#" data-page="contact" class="btn btn-outline btn-sm">免费预约演示 →</a>
       </div>
       <div class="product-entry-card fade-in">
-        <div class="pec-icon">🚀</div>
-        <div class="pec-title">专业版 / 旗舰版</div>
-        <div class="pec-desc">解锁全部功能模块：数据工厂、智能助手 Pro、高级权限、API 集成、专属客服，支持更多成员和数据量。</div>
-        <a href="#" data-page="products" class="btn btn-outline btn-sm">查看版本对比 →</a>
+        <div class="pec-icon">⭐</div>
+        <div class="pec-title">专业版</div>
+        <div class="pec-desc">解锁全部五大AI功能：AI财务分析、AI智能银行流水、高级报表、多组织核算，满足成长型企业需求。</div>
+        <a href="#" data-page="products" class="btn btn-outline btn-sm">查看功能详情 →</a>
       </div>
       <div class="product-entry-card fade-in">
         <div class="pec-icon">🏢</div>
-        <div class="pec-title">私有化部署</div>
-        <div class="pec-desc">支持企业自建服务器独立部署，数据完全自主掌控，满足金融、医疗、政府等高合规行业需求。</div>
+        <div class="pec-title">集团版 / 私有化</div>
+        <div class="pec-desc">支持集团多组织管控、私有化独立部署，满足金融、医疗等高合规行业对数据安全的严苛要求。</div>
         <a href="#" data-page="contact" class="btn btn-outline btn-sm">联系销售团队 →</a>
       </div>
     </div>
@@ -306,11 +321,11 @@
   <section style="padding: 80px 0;">
     <div class="cta-banner fade-in">
       <div class="section-tag">立即开始</div>
-      <h2 class="section-title">5 分钟，搭建您的第一个业务应用</h2>
-      <p>注册即送 14 天专业版体验，无需信用卡，随时可取消，240 万+企业的共同选择。</p>
+      <h2 class="section-title">开启您的智能税务管理之旅</h2>
+      <p>预约专属演示，顾问2小时内响应，为您定制金蝶AI税务云专属方案。</p>
       <div class="cta-actions">
-        <a href="#" data-page="contact" class="btn btn-primary">免费注册体验</a>
-        <a href="#" data-page="contact" class="btn btn-outline">预约产品演示</a>
+        <a href="#" data-page="contact" class="btn btn-primary">免费预约演示</a>
+        <a href="#" data-page="contact" class="btn btn-outline">联系销售顾问</a>
       </div>
     </div>
   </section>
@@ -324,8 +339,8 @@
 
   <div class="page-banner">
     <div class="section-tag">产品功能</div>
-    <h1 class="section-title">所有功能，一览无余</h1>
-    <p>从零代码表单到 AI 智能助手，简道云持续进化，满足企业全场景需求。</p>
+    <h1 class="section-title">五大AI核心产品，一览无余</h1>
+    <p>金蝶AI税务云持续迭代，AI能力深度融合税务全流程，助力企业税务智能化升级。</p>
   </div>
 
   <section>
@@ -333,114 +348,95 @@
 
       <div class="product-card fade-in">
         <div class="pc-badge">核心功能</div>
-        <div class="pc-icon">📋</div>
-        <div class="pc-title">表单设计器</div>
+        <div class="pc-icon">📒</div>
+        <div class="pc-title">AI记账</div>
         <div class="pc-desc">
-          拖拽式表单构建，30+ 字段类型（文本、数字、附件、签名、定位等），支持条件显示、关联查询、公式计算，满足各类数据收集需求。
+          基于大模型AI技术，自动识别各类凭证单据，智能归类会计科目，自动生成标准记账分录，准确率超99%。支持多账套、多组织核算，彻底解放财务人员的双手。
         </div>
         <ul class="pc-features">
-          <li>30+ 字段类型，覆盖所有录入场景</li>
-          <li>条件逻辑、关联数据、公式计算</li>
-          <li>PC + 手机端自适应，随时录入</li>
-          <li>子表单支持动态行数据管理</li>
+          <li>AI自动识别票据，智能归类科目</li>
+          <li>自动生成记账分录，准确率99%+</li>
+          <li>支持多账套、多币种核算</li>
+          <li>异常凭证智能预警提醒</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费体验</a>
           <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">流程审批</div>
-        <div class="pc-icon">🔄</div>
-        <div class="pc-title">流程引擎</div>
-        <div class="pc-desc">
-          可视化流程节点配置，支持会签、或签、委托、加签，条件分支自动路由，钉钉/企微/邮件多渠道消息通知，审批效率提升 60%。
-        </div>
-        <ul class="pc-features">
-          <li>可视化流程图，拖拽配置节点</li>
-          <li>会签、或签、条件分支灵活组合</li>
-          <li>钉钉 / 企微 / 微信消息实时推送</li>
-          <li>审批历史全程可追溯</li>
-        </ul>
-        <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
-          <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
-        </div>
-      </div>
-
-      <div class="product-card fade-in">
-        <div class="pc-badge">数据分析</div>
+        <div class="pc-badge">税务申报</div>
         <div class="pc-icon">📊</div>
-        <div class="pc-title">分析仪表盘</div>
+        <div class="pc-title">AI报税</div>
         <div class="pc-desc">
-          10+ 图表类型（折线、柱状、饼图、地图、漏斗等），实时数据联动，支持多表跨源分析，自然语言 AI 查询，让每个人都成为数据分析师。
+          智能采集企业经营数据，自动填报增值税、企业所得税、个税、附加税等多税种申报表，自动校验数据逻辑，一键提交税务机关，报税合规零风险。
         </div>
         <ul class="pc-features">
-          <li>10+ 图表类型，拖拽配置</li>
-          <li>NL2SQL 自然语言智能查询</li>
-          <li>实时数据更新，自动刷新</li>
-          <li>RBAC 权限，数据安全隔离</li>
+          <li>覆盖增值税、所得税、个税等多税种</li>
+          <li>数据自动采集，智能填报申报表</li>
+          <li>申报前自动校验，规避申报风险</li>
+          <li>申报记录全程存档，随时可查</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费体验</a>
           <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">AI 功能</div>
+        <div class="pc-badge">智能分析</div>
         <div class="pc-icon">🤖</div>
-        <div class="pc-title">智能助手 Pro</div>
+        <div class="pc-title">AI财务分析</div>
         <div class="pc-desc">
-          基于企业业务数据的 AI 助手，支持智能填写、内容总结、异常预警、数据洞察报告自动生成，将重复性工作效率提升 3 倍。
+          AI深度解析企业财务数据，自动生成资产负债表、利润表、现金流量表，提供多维度财务健康诊断、税负优化建议和经营风险预警，赋能管理层科学决策。
         </div>
         <ul class="pc-features">
-          <li>AI 智能识别并自动填写表单</li>
-          <li>文档智能总结与摘要生成</li>
-          <li>业务异常自动识别并预警</li>
-          <li>私有化数据训练，安全合规</li>
+          <li>自动生成三大财务报表</li>
+          <li>AI智能财务健康诊断</li>
+          <li>税负优化建议，节税方案推荐</li>
+          <li>经营风险预警，实时监控异常</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费体验</a>
           <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">数据集成</div>
-        <div class="pc-icon">🏭</div>
-        <div class="pc-title">数据工厂</div>
+        <div class="pc-badge">发票管理</div>
+        <div class="pc-icon">🧾</div>
+        <div class="pc-title">AI智能取票</div>
         <div class="pc-desc">
-          企业级数据融合与计算平台，支持多表关联、聚合计算、数据清洗，内置 MySQL / API / 文件等连接器，零代码打通数据孤岛。
+          自动从税务平台、企业邮箱、微信、钉钉等多渠道智能抓取发票，OCR识别率达99.9%，自动验真查重防伪，发票全生命周期管理，彻底告别手工收票报销。
         </div>
         <ul class="pc-features">
-          <li>多源数据融合，零代码 ETL</li>
-          <li>支持 MySQL、Oracle、API 等接入</li>
-          <li>复杂计算逻辑可视化配置</li>
-          <li>定时任务自动执行数据处理</li>
+          <li>多渠道自动抓取，无需人工上传</li>
+          <li>OCR识别率99.9%，秒级处理</li>
+          <li>自动验真查重，防止虚假发票</li>
+          <li>发票归档分类，合规存储管理</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费体验</a>
           <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
 
       <div class="product-card fade-in">
-        <div class="pc-badge">团队协作</div>
-        <div class="pc-icon">📚</div>
-        <div class="pc-title">知识库</div>
+        <div class="pc-badge">资金管理</div>
+        <div class="pc-icon">🏦</div>
+        <div class="pc-title">AI智能获取银行流水</div>
         <div class="pc-desc">
-          企业级在线文档与 Wiki 平台，支持多人实时协作编辑、版本历史、权限管控，让团队知识沉淀有序，新人上手效率提升 50%。
+          对接100+主流银行，通过授权自动获取银行流水，AI智能分类收支类型，实时监控企业资金动态，自动完成银企对账，资金管理清晰透明，财务核查效率提升90%。
         </div>
         <ul class="pc-features">
-          <li>多人实时协作编辑文档</li>
-          <li>树形目录结构，知识有序沉淀</li>
-          <li>细粒度权限，部门隔离管控</li>
-          <li>富文本 + Markdown 双模式</li>
+          <li>对接100+银行，自动获取流水</li>
+          <li>AI智能分类收支，自动归账</li>
+          <li>实时资金监控，异常推送预警</li>
+          <li>银企自动对账，零误差核查</li>
         </ul>
         <div class="pc-actions">
-          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费使用</a>
+          <a href="#" data-page="contact" class="btn btn-primary btn-sm">免费体验</a>
           <a href="#" data-page="contact" class="btn btn-outline btn-sm">预约演示</a>
         </div>
       </div>
@@ -452,43 +448,44 @@
   <section style="background:var(--bg-dark);">
     <div class="text-center">
       <div class="section-tag">版本与价格</div>
-      <h2 class="section-title">选择适合您团队的方案</h2>
-      <p class="section-sub">从个人免费版到企业私有化部署，灵活满足各类规模需求。</p>
+      <h2 class="section-title">选择适合您企业的方案</h2>
+      <p class="section-sub">从初创企业到大型集团，灵活满足各类规模的税务管理需求。</p>
     </div>
     <div class="price-grid">
       <div class="price-card fade-in">
-        <div class="price-name">免费版</div>
-        <div class="price-num">¥0 <span>/ 永久</span></div>
-        <div class="price-desc">适合个人及小团队试用</div>
+        <div class="price-name">标准版</div>
+        <div class="price-num">¥999 <span>/ 月起</span></div>
+        <div class="price-desc">适合中小企业税务数字化起步</div>
         <ul class="price-features">
-          <li>3 名成员</li>
-          <li>基础表单与流程</li>
-          <li>1,000 条数据存储</li>
-          <li>社区支持</li>
+          <li>AI记账（月处理2000张凭证）</li>
+          <li>AI报税（增值税+个税）</li>
+          <li>AI智能取票</li>
+          <li>基础财务报表</li>
+          <li>在线客服支持</li>
         </ul>
-        <a href="#" data-page="contact" class="btn btn-outline">免费注册</a>
+        <a href="#" data-page="contact" class="btn btn-outline">预约演示</a>
       </div>
       <div class="price-card hot fade-in">
         <div class="price-hot-badge">🔥 最受欢迎</div>
         <div class="price-name">专业版</div>
-        <div class="price-num">¥599 <span>/ 月起</span></div>
-        <div class="price-desc">适合成长型团队，解锁全部核心功能</div>
+        <div class="price-num">¥2,999 <span>/ 月起</span></div>
+        <div class="price-desc">适合成长型企业，解锁全部AI功能</div>
         <ul class="price-features">
-          <li>20 名成员（可扩充）</li>
-          <li>全部功能模块解锁</li>
-          <li>智能助手 Pro</li>
-          <li>数据工厂 & 高级分析</li>
-          <li>API 集成与 Webhook</li>
-          <li>专属客服响应</li>
+          <li>全部五大AI核心功能</li>
+          <li>AI财务分析 + 智能银行流水</li>
+          <li>多税种申报（含企业所得税）</li>
+          <li>无限凭证处理量</li>
+          <li>专属客户成功经理</li>
+          <li>API接口对接</li>
         </ul>
-        <a href="#" data-page="contact" class="btn btn-primary">立即购买</a>
+        <a href="#" data-page="contact" class="btn btn-primary">立即咨询</a>
       </div>
       <div class="price-card fade-in">
-        <div class="price-name">旗舰版 / 私有化</div>
+        <div class="price-name">集团版 / 私有化</div>
         <div class="price-num">定制 <span>询价</span></div>
-        <div class="price-desc">适合大型企业及高合规行业</div>
+        <div class="price-desc">适合大型集团及高合规行业</div>
         <ul class="price-features">
-          <li>不限成员</li>
+          <li>多组织集团管控</li>
           <li>私有化独立部署</li>
           <li>数据完全自主掌控</li>
           <li>定制化开发支持</li>
@@ -504,11 +501,11 @@
   <section style="padding:40px 5% 96px;">
     <div class="cta-banner fade-in">
       <div class="section-tag">立即行动</div>
-      <h2 class="section-title">240 万+ 企业的选择，现在轮到您了</h2>
-      <p>注册即送 14 天专业版体验，全功能免费试用，无需信用卡。</p>
+      <h2 class="section-title">50万+企业的选择，现在轮到您了</h2>
+      <p>预约专属演示，顾问2小时内响应，为您量身定制金蝶AI税务云解决方案。</p>
       <div class="cta-actions">
-        <a href="#" data-page="contact" class="btn btn-primary">免费注册体验</a>
-        <a href="#" data-page="contact" class="btn btn-outline">预约一对一演示</a>
+        <a href="#" data-page="contact" class="btn btn-primary">免费预约演示</a>
+        <a href="#" data-page="contact" class="btn btn-outline">联系销售顾问</a>
       </div>
     </div>
   </section>
@@ -522,8 +519,8 @@
 
   <div class="page-banner">
     <div class="section-tag">联系我们</div>
-    <h1 class="section-title">与简道云专家直接对话</h1>
-    <p>填写信息，专属顾问 2 小时内回访，为您定制专属搭建方案，免费演示全流程。</p>
+    <h1 class="section-title">与金蝶AI税务云专家直接对话</h1>
+    <p>填写信息，专属顾问 2 小时内回访，为您定制专属税务智能化方案，免费演示全流程。</p>
   </div>
 
   <section>
@@ -532,8 +529,8 @@
       <!-- Left: Info -->
       <div class="contact-info fade-in">
         <div>
-          <h2>开启您的零代码之旅</h2>
-          <p>无论您是想了解具体功能、讨论价格方案，还是需要现场实施支持，我们的专家随时待命。</p>
+          <h2>开启您的智能税务之旅</h2>
+          <p>无论您是想了解具体功能、讨论价格方案，还是需要现场实施支持，我们的税务专家随时待命。</p>
         </div>
 
         <div class="contact-items">
@@ -541,21 +538,21 @@
             <div class="ci-icon">📞</div>
             <div class="ci-text">
               <strong>销售热线</strong>
-              <span>400-101-1890（工作日 9:00–18:00）</span>
+              <span>400-830-9860（工作日 9:00–18:00）</span>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon">✉️</div>
             <div class="ci-text">
               <strong>商务邮箱</strong>
-              <span>sales@jiandaoyun.com</span>
+              <span>sales@kingdee.com</span>
             </div>
           </div>
           <div class="contact-item">
             <div class="ci-icon">📍</div>
             <div class="ci-text">
               <strong>公司地址</strong>
-              <span>江苏省南京市栖霞区帆软软件园</span>
+              <span>广东省深圳市南山区科技南12路金蝶软件园</span>
             </div>
           </div>
           <div class="contact-item">
@@ -570,7 +567,7 @@
         <div style="padding:24px;background:rgba(22,100,255,0.08);border:1px solid rgba(22,100,255,0.2);border-radius:12px;">
           <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.8;">
             🎁 <strong style="color:var(--text-main);">限时福利：</strong>
-            现在注册即享 <strong style="color:#1664FF;">14 天专业版全功能</strong>免费体验，附赠专属实施顾问 1 对 1 陪跑，帮您 5 分钟搭建第一个业务应用。
+            现在预约即享 <strong style="color:#1664FF;">30天全功能</strong>免费体验，附赠专属实施顾问 1 对 1 陪跑，帮您快速完成税务系统迁移与配置。
           </p>
         </div>
       </div>
@@ -615,29 +612,29 @@
             <label for="f-need">感兴趣的功能</label>
             <select id="f-need" name="need">
               <option value="">请选择功能模块（选填）</option>
-              <option>表单数据收集</option>
-              <option>流程审批管理</option>
-              <option>数据分析仪表盘</option>
-              <option>智能助手 Pro（AI）</option>
-              <option>数据工厂 / 系统集成</option>
-              <option>私有化部署</option>
-              <option>整体数字化解决方案</option>
+              <option>AI记账</option>
+              <option>AI报税</option>
+              <option>AI财务分析</option>
+              <option>AI智能取票</option>
+              <option>AI智能获取银行流水</option>
+              <option>集团版 / 私有化部署</option>
+              <option>整体智能税务解决方案</option>
             </select>
           </div>
           <div class="form-group">
             <label for="f-scene">业务场景描述</label>
-            <textarea id="f-scene" name="scene" placeholder="简单描述您想用简道云解决什么问题，例如：想搭建一套进销存管理系统（选填）"></textarea>
+            <textarea id="f-scene" name="scene" placeholder="简单描述您的税务管理痛点，例如：手工记账效率低、报税容易出错等（选填）"></textarea>
           </div>
           <button type="submit" class="submit-btn">立即预约免费演示</button>
           <p style="font-size:0.8rem;color:var(--text-muted);margin-top:12px;text-align:center;">
-            提交即表示您同意简道云 <a href="#" style="color:var(--primary-light);">隐私政策</a>，我们承诺保护您的数据安全。
+            提交即表示您同意金蝶AI税务云 <a href="#" style="color:var(--primary-light);">隐私政策</a>，我们承诺保护您的数据安全。
           </p>
         </form>
 
         <div id="formSuccess" class="form-success">
           <div class="success-icon">🎉</div>
           <h4>提交成功！</h4>
-          <p>感谢您的信任！我们的专属顾问将在 <strong>2 小时内</strong>主动联系您，请保持手机畅通。<br/>在此期间您也可以先免费注册体验。</p>
+          <p>感谢您的信任！我们的专属顾问将在 <strong>2 小时内</strong>主动联系您，请保持手机畅通。<br/>在此期间您也可以先了解我们的产品功能。</p>
           <br/>
           <a href="#" data-page="products" class="btn btn-outline btn-sm" style="margin-top:8px;">查看产品功能</a>
         </div>
@@ -655,45 +652,53 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="jdy-logo-wrap" style="margin-bottom:12px;">
-        <div class="jdy-logo-icon">简</div>
-        <span style="font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">简道云</span>
+        <div class="jdy-logo-butterfly">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 24 C18 16, 6 14, 6 24 C6 32, 16 34, 24 28" fill="rgba(255,255,255,0.9)"/>
+            <path d="M24 24 C30 16, 42 14, 42 24 C42 32, 32 34, 24 28" fill="rgba(255,255,255,0.7)"/>
+            <path d="M24 24 C18 30, 8 32, 10 38 C12 42, 20 40, 24 34" fill="rgba(255,255,255,0.6)"/>
+            <path d="M24 24 C30 30, 40 32, 38 38 C36 42, 28 40, 24 34" fill="rgba(255,255,255,0.5)"/>
+            <circle cx="24" cy="26" r="2.5" fill="white"/>
+          </svg>
+        </div>
+        <span style="font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,#4285ff,#00CFFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">金蝶AI税务云</span>
       </div>
-      <p>帆软旗下零代码应用搭建平台，连续 4 年中国市场占有率第一，240 万+ 企业信赖之选。</p>
+      <p>金蝶集团旗下智能税务管理平台，30年品牌积淀，服务50万+企业客户，AI驱动税务全流程智能化。</p>
     </div>
     <div class="footer-col">
       <h4>产品功能</h4>
       <ul>
-        <li><a href="#" data-page="products">表单设计器</a></li>
-        <li><a href="#" data-page="products">流程引擎</a></li>
-        <li><a href="#" data-page="products">分析仪表盘</a></li>
-        <li><a href="#" data-page="products">智能助手 Pro</a></li>
-        <li><a href="#" data-page="products">数据工厂</a></li>
+        <li><a href="#" data-page="products">AI记账</a></li>
+        <li><a href="#" data-page="products">AI报税</a></li>
+        <li><a href="#" data-page="products">AI财务分析</a></li>
+        <li><a href="#" data-page="products">AI智能取票</a></li>
+        <li><a href="#" data-page="products">AI智能获取银行流水</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>解决方案</h4>
       <ul>
-        <li><a href="#" data-page="products">进销存管理</a></li>
-        <li><a href="#" data-page="products">CRM 系统</a></li>
-        <li><a href="#" data-page="products">生产管理</a></li>
-        <li><a href="#" data-page="products">人事 OA</a></li>
+        <li><a href="#" data-page="products">中小企业方案</a></li>
+        <li><a href="#" data-page="products">制造业方案</a></li>
+        <li><a href="#" data-page="products">零售电商方案</a></li>
+        <li><a href="#" data-page="products">集团企业方案</a></li>
         <li><a href="#" data-page="products">私有化部署</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>支持与服务</h4>
+      <h4>联系与支持</h4>
       <ul>
-        <li><a href="#" data-page="contact">免费注册</a></li>
         <li><a href="#" data-page="contact">预约演示</a></li>
         <li><a href="#" data-page="contact">价格咨询</a></li>
+        <li><a href="tel:4008309860">400-830-9860</a></li>
+        <li><a href="mailto:sales@kingdee.com">sales@kingdee.com</a></li>
         <li><a href="#">帮助文档</a></li>
-        <li><a href="#">加入我们</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 简道云（帆软软件有限公司）保留所有权利。</p>
-    <p>南京 · 北京 · 上海 · 深圳 · 成都</p>
+    <p>© 2026 金蝶AI税务云（金蝶软件（中国）有限公司）保留所有权利。</p>
+    <p>深圳 · 北京 · 上海 · 广州 · 成都</p>
   </div>
 </footer>
 
